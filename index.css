@@ -1,48 +1,77 @@
-body { 
-    background-color: bisque;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    
-}
-image {background-color: aquamarine;
-    
-
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-header {
-    text-align: center;
-    padding: 20px;
-
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
-nav {
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
+header nav {
+  position: fixed; /* Keeps the navigation fixed at the top */
+  top: 0;
+  width: 100%;
+  padding: 10px 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-around;
 }
 
-  section {
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    background:color #fff
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-  }
-  
-  form {
-    width: 100%;
-  }
+header nav a {
+  color: brown;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: background 0.3s;
+}
 
-  form input, label {
-    display: block;
-  }
+header nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
 
-  footer {
-    text-align: center;
-    padding: 10px;
-    background-color: #333;
-    color: #000;
-  }
+main {
+  scroll-padding-top: 70px; /* Adjust to match nav height */
+}
+
+section {
+  padding: 100px 20px; /* Adds padding inside each section */
+  margin-top: 100px; /* Pushes sections below the fixed nav */
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:burlywood;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+section p {
+  margin-bottom: 10px;
+}
+
+section ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+form {
+  width: 100%;
+}
+
+form input, label {
+  display: block;
+}
+
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+}
